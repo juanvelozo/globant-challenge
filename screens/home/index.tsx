@@ -4,18 +4,19 @@ import {
 	Keyboard,
 	Text,
 	View,
-} from 'react-native'
+ Animated } from 'react-native'
 import { useCharacters } from '../../hooks/useCharacters'
 import { Layout } from '../../components/common/Layout'
 import { Input } from '../../components/common/Input/Input'
 import { CharacterCard } from '../../components/Characters/CharacterCard'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Button } from '../../components/common/Button'
 import { DancerMorty } from '../../components/lottie/DancerMorty'
 
+
 export const Home = (): JSX.Element => {
 	// constants
-
+	const scrollY = useRef(new Animated.Value(0)).current;
 	// states
 	const [page, setPage] = useState<number>(1)
 	const [searchValue, setSearchValue] = useState<string>('')
@@ -75,16 +76,21 @@ export const Home = (): JSX.Element => {
 						<DancerMorty/>
 					</View>
 				) : (
-					<FlatList
+					<Animated.FlatList
+					onScroll={Animated.event([{nativeEvent: {contentOffset: {y: scrollY}}}],{useNativeDriver: true})}
 						data={characters?.results
 							.slice(0, 10)}
-						renderItem={({ item }) => <CharacterCard data={item} />}
+						renderItem={({ item, index }) => {
+							const inputRange = [-1, 0, 100 * index, 100 * (index *2 )]
+							const scale = scrollY.interpolate({inputRange, outputRange:[1,1,1,0]})
+							return(<Animated.View style={{transform:[{scale}]}}><CharacterCard data={item} /></Animated.View>)
+						}}
 						ItemSeparatorComponent={() => (
 							<View
 								style={{
 									height: 1,
 									backgroundColor: '#00000000',
-									marginVertical: 8,
+									marginVertical: 5,
 								}}
 							/>
 						)}

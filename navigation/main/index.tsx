@@ -21,7 +21,7 @@ export function MainNavigator() {
 							headerShadowVisible: false,
 							headerTransparent: true,
 							title: '',
-							headerTintColor: '#fff',
+							headerTintColor: '#fff',animation:'slide_from_right'
 						}}
 					/>
 				)
