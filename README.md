@@ -10,15 +10,15 @@ Una vez la instalación de las dependencias se haya completado, debe ejecutar el
 
 ### Para android:
 ```
-yarn android
+npm run android
 ```
 ### Para web (Con expo)
 ```
-yarn web
+npm run web
 ```
 ### Para iOS (No testeado)
 ```
-yarn ios
+npn run ios
 ```
 > [!WARNING]
 > Tenga en cuenta que este proyecto no fue testeado en el entorno de desarrollo nativo de iOS.
