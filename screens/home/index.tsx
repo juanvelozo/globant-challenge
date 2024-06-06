@@ -1,5 +1,4 @@
 import {
-	FlatList,
 	Image,
 	Keyboard,
 	Text,
@@ -46,6 +45,7 @@ export const Home = (): JSX.Element => {
 				source={{
 					uri: 'https://upload.wikimedia.org/wikipedia/fr/c/c8/Rick_and_Morty_logo.png',
 				}}
+				testID='RnMLogo'
 				style={{
 					width: 160,
 					height: 50,
