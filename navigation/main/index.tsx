@@ -18,6 +18,9 @@ export function MainNavigator() {
 						component={MainComponents[route]}
 						options={{
 							headerShown: route !== RootStackRoutesEnum.Home,
+							headerShadowVisible: false,
+							headerTransparent: true,
+							title: ''
 						}}
 					/>
 				)

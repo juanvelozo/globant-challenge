@@ -1,21 +1,21 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import { View } from 'react-native'
-import { ILayoutProps } from './types'
+import { type ILayoutProps } from './types'
 import { styles } from './styles'
 
 export const Layout: FC<ILayoutProps> = (props): JSX.Element => {
-	//constants
+	// constants
 	const { backgroundColor } = props
-	const style = styles(backgroundColor!)
-	//states
+	const style = styles(backgroundColor)
+	// states
 
-	//hooks
+	// hooks
 
-	//functions
+	// functions
 
-	//effects
+	// effects
 
-	//render
+	// render
 
 	return (
 		<View {...props} style={style.layout}>

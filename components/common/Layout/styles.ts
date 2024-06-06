@@ -1,6 +1,6 @@
 import { type ColorValue, StyleSheet } from 'react-native'
 
-export const styles = (backgroundColor: ColorValue) =>
+export const styles = (backgroundColor?: ColorValue) =>
 	StyleSheet.create({
 		layout: {
 			backgroundColor,
