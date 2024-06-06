@@ -1,26 +1,26 @@
-import { type FC } from 'react';
-import { View,Text } from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
-import { type IIconLabelProps } from './types';
-import { styles } from './styles';
+import { type FC } from 'react'
+import { View, Text } from 'react-native'
+import Icon from 'react-native-vector-icons/AntDesign'
+import { type IIconLabelProps } from './types'
+import { styles } from './styles'
 
-export const IconLabel:FC<IIconLabelProps> = ({icon,text}):JSX.Element => {
-// constants
+export const IconLabel: FC<IIconLabelProps> = ({ icon, text }): JSX.Element => {
+	// constants
 
-// states
+	// states
 
-// hooks
+	// hooks
 
-// functions
+	// functions
 
-// effects
+	// effects
 
-// render
+	// render
 
-    return (
-        <View style={styles.container}>
-            <Icon name={icon} size={20} color="#000" style={styles.icon}/>
-            <Text>{text}</Text>
-        </View>
-    );
+	return (
+		<View style={styles.container}>
+			<Icon name={icon} size={24} color="#000" style={styles.icon} />
+			<Text style={styles.text}>{text}</Text>
+		</View>
+	)
 }

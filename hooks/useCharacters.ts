@@ -19,7 +19,7 @@ export function useCharacters(): IGetCharacters {
 		setLoading(true)
 		try {
 			const response = await axios.get<CharacterResponse>(
-				`https://rickandmortyapi.com/api/character?page${page}&name=${charName}&per_page=10`
+				`https://rickandmortyapi.com/api/character?page=${page}&name=${charName}&per_page=10`
 			)
 			setCharacters(response.data)
 		} catch (error) {
@@ -27,7 +27,9 @@ export function useCharacters(): IGetCharacters {
 				setError(error)
 			}
 		} finally {
-			setLoading(false)
+			setTimeout(() => {
+				setLoading(false)
+			}, 500);
 		}
 	}
 	// side effects

@@ -1,4 +1,4 @@
 export interface IIconLabelProps {
-    text: string
-    icon: string
+	text: string
+	icon: string
 }

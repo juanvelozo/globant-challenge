@@ -18,7 +18,7 @@ export interface Character {
 }
 
 export type CharacterStatus = 'alive' | 'dead' | 'unknown'
-export type CharacterGender = 'Female'| 'Male'| 'Genderless' |'unknown'
+export type CharacterGender = 'Female' | 'Male' | 'Genderless' | 'unknown'
 export interface CharacterResponse {
 	info: {
 		count: number

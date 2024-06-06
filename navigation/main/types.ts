@@ -2,19 +2,19 @@ import { type ParamListBase, type RouteProp } from '@react-navigation/core'
 import { type ComponentType } from 'react'
 import { type NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { Home } from '../../screens/home'
-import { type Character } from '../../helpers/types/types';
-import { CharacterScreen } from '../../screens/character';
+import { type Character } from '../../helpers/types/types'
+import { CharacterScreen } from '../../screens/character'
 
 // All the routes in the navigator
 export interface RootStackNavigator extends ParamListBase {
-	Home: undefined;
+	Home: undefined
 	CharacterPage: Character | undefined
 }
 
 // An enum to enumerate all routes
 export enum RootStackRoutesEnum {
 	Home = 'Home',
-	CharacterPage = 'CharacterPage'
+	CharacterPage = 'CharacterPage',
 }
 
 // Typing the "component" attribute in Stack.Screen

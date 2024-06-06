@@ -20,7 +20,8 @@ export function MainNavigator() {
 							headerShown: route !== RootStackRoutesEnum.Home,
 							headerShadowVisible: false,
 							headerTransparent: true,
-							title: ''
+							title: '',
+							headerTintColor: '#fff',
 						}}
 					/>
 				)
